@@ -1,4 +1,4 @@
-learn_blackjack_counting
+Learn Blackjack Counting
 ========================
 
 This is a game to practice counting.
