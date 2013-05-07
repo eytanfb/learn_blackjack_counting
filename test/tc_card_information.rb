@@ -19,18 +19,4 @@ class TestCardInformation < Test::Unit::TestCase
     assert_equal(expected, actual)
   end
   
-  def test_card_values
-    expected = [1, 11]
-    actual = @card_info.values['A']
-    assert_equal(expected, actual)
-    
-    expected = 2
-    actual = @card_info.values['2']
-    assert_equal(expected, actual)
-
-    expected = 3
-    actual = @card_info.values['3']
-    assert_equal(expected, actual)    
-  end
-  
 end

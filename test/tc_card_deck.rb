@@ -11,7 +11,7 @@ class TestCardDeck < Test::Unit::TestCase
     assert_equal(52, @card_deck.count)
     top_card = @card_deck.cards[-1]
     popped_card = @card_deck.pop_card()
-    assert(top_card, popped_card)
+    assert_equal(top_card, popped_card)
     assert_equal(51, @card_deck.count)
   end
   

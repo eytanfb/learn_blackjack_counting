@@ -3,10 +3,12 @@ require './src/card_information'
 
 class CardDeck
   
+  attr_reader :cards
+  
   def initialize
     @card_info = CardInformation.new
     @cards = []
-    create_deck()
+    create_deck
   end
   
   def pop_card
@@ -17,12 +19,10 @@ class CardDeck
     @cards.count
   end
   
-  private
-  
   def create_deck
-    @card_info.suits do |suit|
-      @card_info.faces do |face|
-        @cards.push(Card.new(suit, face))
+    @card_info.suits.each do |suit|
+      @card_info.faces.each do |face|        
+        @cards << Card.new(suit, face)
       end
     end
   end

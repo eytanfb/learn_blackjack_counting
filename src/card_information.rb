@@ -1,6 +1,6 @@
 class CardInformation
   
-  attr_reader :suits, :faces, :values
+  attr_reader :suits, :faces
   
   def initialize
     @suits = ['D', 'C', 'S', 'H'].sort
