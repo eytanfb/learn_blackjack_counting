@@ -4,7 +4,9 @@ require 'test/unit'
 class TestCard < Test::Unit::TestCase
   
   def setup
-    @card = Card.new('D', 'Q')
+    @face_card = Card.new('D', 'Q')
+    @ace_card = Card.new('H', 'A')
+    @non_face_card = Card.new('C', '5')
   end
   
   def test_initialize
@@ -20,8 +22,12 @@ class TestCard < Test::Unit::TestCase
            "|       |\n" +
            "|D     D|\n" +
            "|-------|"
-    puts card
-    puts @card.inspect
-    assert_equal(card, @card.inspect)
+    assert_equal(card, @face_card.print)
+  end
+  
+  def test_card_value
+    assert_equal(10, @face_card.value)
+    assert_equal(11, @ace_card.value)
+    assert_equal(5, @non_face_card.value)
   end
 end

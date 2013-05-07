@@ -1,10 +1,10 @@
 require './src/card'
+require './src/card_information'
 
 class CardDeck
   
   def initialize
-    @suits = ['Diamonds', 'Spades', 'Clubs', 'Hearts']
-    @faces = ['A', '2', '3', '4', '5', '6', '7' , '8', '9', '10', 'J', 'Q', 'K']
+    @card_info = CardInformation.new
     @cards = []
     create_deck()
   end
@@ -18,8 +18,8 @@ class CardDeck
   end
   
   def create_deck
-    @suits.each do |suit|
-      @faces.each do |face|
+    @card_info.suits do |suit|
+      @card_info.faces do |face|
         @cards.push(Card.new(suit, face))
       end
     end

@@ -6,7 +6,7 @@ class Card
     @face = face
   end
   
-  def inspect
+  def print
     "|-------|\n" +
     "|#{suit}     #{suit}|\n" +
     "|       |\n" +
@@ -14,5 +14,15 @@ class Card
     "|       |\n" +
     "|#{suit}     #{suit}|\n" +
     "|-------|"
+  end
+  
+  def value
+    if face == 'A'
+      return 11
+    elsif face == 'K' || face == 'Q' || face == 'J'
+      return 10
+    else
+      return face.to_i
+    end
   end
 end
