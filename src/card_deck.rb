@@ -17,6 +17,8 @@ class CardDeck
     @cards.count
   end
   
+  private
+  
   def create_deck
     @card_info.suits do |suit|
       @card_info.faces do |face|
