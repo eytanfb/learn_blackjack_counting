@@ -22,6 +22,6 @@ class TestPlayer < Test::Unit::TestCase
   def test_receive_card
     card = Card.new "H", "Q"
     @player.receive_card card
-    assert(@player.hand.cards.include?(card))
+    assert(@player.hand.include?(card))
   end
 end

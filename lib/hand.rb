@@ -8,19 +8,13 @@ class Hand
   
   def score
     score = @cards.map(&:value).inject(0, :+)
-    if score > 21 and include_ace?
-      return score - 10
-    end
-    return score
+    score -= 10 if score > 21 and include_ace?
+    score
   end
   
   def include_ace?
-    for card in @cards
-      if card.face == 'A'
-        return true
-      end
-    end
-    return false
+    @cards.each { |card| return true if card.face == 'A' }
+    false
   end
   
   def add_card(card)
@@ -29,6 +23,12 @@ class Hand
   
   def number_of_cards
     @cards.count
+  end
+  
+  def include?(card)
+    @cards.each do |card_in_hand|
+      return card.face == card_in_hand.face && card.suit == card_in_hand.suit ? true : false
+    end
   end
   
 end

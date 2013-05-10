@@ -1,4 +1,4 @@
-require './hand'
+require './lib/hand'
 
 class Player
   
@@ -6,6 +6,7 @@ class Player
   
   def initialize(name)
     @name = name
+    @hand = Hand.new
   end
   
   def receive_card(card)

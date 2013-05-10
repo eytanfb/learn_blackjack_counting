@@ -42,4 +42,11 @@ class TestHand < Test::Unit::TestCase
     assert_equal(16, @hand.score)
   end
   
+  def test_include?
+    assert(@hand.include?(Card.new('S', '5')))
+    assert_equal(false, @hand.include?(Card.new('S', '6')))
+    assert_equal(false, @hand.include?(Card.new('D', '5')))
+    # assert(@hand.include?(Card.new('D', '2')) == false, "Card should not be in hand")
+  end
+  
 end
