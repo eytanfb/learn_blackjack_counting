@@ -2,8 +2,8 @@ require './lib/card'
 
 class Hand
   
-  def initialize(card1, card2)
-    @cards = [card1, card2]
+  def initialize
+    @cards = []
   end
   
   def score
