@@ -1,4 +1,4 @@
-require './src/card_information'
+require './lib/card_information'
 require 'test/unit'
 
 class TestCardInformation < Test::Unit::TestCase

@@ -1,6 +1,6 @@
 require 'test/unit'
-require './src/hand'
-require './src/card'
+require './lib/hand'
+require './lib/card'
 
 class TestHand < Test::Unit::TestCase
   

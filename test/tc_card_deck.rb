@@ -1,4 +1,4 @@
-require './src/card_deck'
+require './lib/card_deck'
 require 'test/unit'
 
 class TestCardDeck < Test::Unit::TestCase

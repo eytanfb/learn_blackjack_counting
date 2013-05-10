@@ -1,5 +1,5 @@
-require './src/card'
-require './src/card_information'
+require './lib/card'
+require './lib/card_information'
 
 class CardDeck
   

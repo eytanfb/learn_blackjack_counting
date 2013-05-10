@@ -1,4 +1,4 @@
-require './src/card'
+require './lib/card'
 
 class Hand
   
