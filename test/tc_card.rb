@@ -21,7 +21,7 @@ class TestCard < Test::Unit::TestCase
            "|   Q   |\n" +
            "|       |\n" +
            "|D     D|\n" +
-           "|-------|"
+           "|-------|\n"
     assert_equal(card, @face_card.print)
   end
   

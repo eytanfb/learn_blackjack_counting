@@ -13,6 +13,10 @@ class TestHand < Test::Unit::TestCase
     @hand_with_ace.add_card(Card.new('Q', '4'))
   end
   
+  def test_responds_to
+    assert_respond_to @hand, :cards
+  end
+  
   def test_add_card_to_hand
     @hand.add_card(Card.new('H', '7'))
     assert(@hand.number_of_cards == 3)

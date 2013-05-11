@@ -13,8 +13,12 @@ class Player
     @hand.add_card card
   end
   
-  # def see_hand
-  #   @hand.cards.each { |card| card.print_card }
-  # end
+  def number_of_cards
+    @hand.number_of_cards
+  end
+  
+  def see_hand
+    @hand.cards.each { |card| print card.print }
+  end
   
 end

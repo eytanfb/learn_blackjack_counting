@@ -13,7 +13,7 @@ class Card
     "|   #{face}   |\n" +
     "|       |\n" +
     "|#{suit}     #{suit}|\n" +
-    "|-------|"
+    "|-------|\n"
   end
   
   def value
