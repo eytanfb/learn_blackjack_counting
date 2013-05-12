@@ -1,6 +1,8 @@
+require './test/test_helper'
 require 'test/unit'
 require './lib/player'
 require './lib/card'
+require './lib/card_search'
 
 class TestPlayer < Test::Unit::TestCase
   
@@ -17,7 +19,7 @@ class TestPlayer < Test::Unit::TestCase
   
   def test_receive_card
     @player.receive_card @card
-    assert @player.hand.include?(@card)
+    assert CardSearch.include? @player.hand.cards, @card
     assert_equal 1, @player.number_of_cards
   end
   
@@ -25,8 +27,7 @@ class TestPlayer < Test::Unit::TestCase
     @player.receive_card @card
     @player.receive_card @card
     print "\n"
-    assert 2.times { print @card.print } == @player.see_hand
-    
+    assert @player.hand.cards.each { |card| print card.print } == @player.see_hand
   end
   
 end

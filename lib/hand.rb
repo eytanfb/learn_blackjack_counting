@@ -27,11 +27,4 @@ class Hand
     @cards.count
   end
   
-  def include?(card)
-    @cards.each do |card_in_hand|
-      return true if card.face == card_in_hand.face && card.suit == card_in_hand.suit
-    end
-    return false
-  end
-  
 end

@@ -1,5 +1,7 @@
+require './test/test_helper'
 require './lib/card'
 require 'test/unit'
+
 
 class TestCard < Test::Unit::TestCase
   

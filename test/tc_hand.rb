@@ -1,6 +1,9 @@
+require './test/test_helper'
 require 'test/unit'
 require './lib/hand'
+require './lib/card_search'
 require './lib/card'
+
 
 class TestHand < Test::Unit::TestCase
   
@@ -47,10 +50,10 @@ class TestHand < Test::Unit::TestCase
   end
   
   def test_include?
-    assert(@hand.include?(Card.new('S', '5')))
-    assert(@hand.include?(Card.new('D', 'K')))
-    assert_equal(false, @hand.include?(Card.new('S', 'K')))
-    assert_equal(false, @hand.include?(Card.new('D', '5')))
+    assert(CardSearch.include?(@hand.cards, Card.new('S', '5')))
+    assert(CardSearch.include?(@hand.cards, Card.new('D', 'K')))
+    assert_equal(false, CardSearch.include?(@hand.cards, Card.new('S', 'K')))
+    assert_equal(false, CardSearch.include?(@hand.cards, Card.new('D', '5')))
   end
   
 end

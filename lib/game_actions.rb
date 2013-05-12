@@ -17,10 +17,4 @@ class GameActions
     @players.count
   end
   
-  # def deal
-  #   2.times do
-  #     @players.each(receive_card())
-  #   end
-  # end
-  
 end
