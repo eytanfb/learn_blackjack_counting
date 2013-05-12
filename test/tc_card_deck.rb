@@ -12,10 +12,10 @@ class TestCardDeck < Test::Unit::TestCase
   end
   
   def test_pop_card
-    assert_equal(52, @card_deck.count)
+    assert_equal 52, @card_deck.number_of_cards
     popped_card = @card_deck.pop_card()
-    assert_equal(@top_card, popped_card)
-    assert_equal(51, @card_deck.count)
+    assert_equal @top_card, popped_card
+    assert_equal 51, @card_deck.number_of_cards
     assert(CardSearch.include?(@card_deck.cards, popped_card) == false)
   end
     

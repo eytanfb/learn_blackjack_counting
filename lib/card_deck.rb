@@ -15,7 +15,7 @@ class CardDeck
     @cards.pop()
   end
   
-  def count
+  def number_of_cards
     @cards.count
   end
   

@@ -17,4 +17,21 @@ class GameActions
     @players.count
   end
   
+  def deal
+    2.times do
+      @players.each do |player|
+        puts player.name
+        card = @deck.pop_card()
+        puts "card is " + card.suit + " " + card.face
+        player.receive_card card
+        puts player.see_hand
+      end
+      puts @dealer.name
+      card = @deck.pop_card()
+      puts "card is " + card.suit + " " + card.face
+      @dealer.receive_card card
+      puts @dealer.see_hand
+    end
+  end
+  
 end
